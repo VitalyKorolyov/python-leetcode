@@ -1,5 +1,5 @@
 import unittest
-from solutions.TopKElementsInList import Solution
+from solutions.topKElementsInList import Solution
 
 class SolutionTest(unittest.TestCase):
     def test(self):

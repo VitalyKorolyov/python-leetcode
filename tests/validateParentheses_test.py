@@ -1,9 +1,12 @@
-import unittest
+import pytest
 from solutions.validateParentheses import Solution
 
 
-class SolutionTest(unittest.TestCase):
+class TestSolution():
     def test(self):
-        self.assertEqual(Solution().isValid("()[]{}"), True)
-        self.assertEqual(Solution().isValid("([])"), True)
-        self.assertEqual(Solution().isValid("(]"), False)
+        assert Solution().isValid("()[]{}") == True
+        assert Solution().isValid("[({}()[])]") == True
+        assert Solution().isValid("[([])}") == False
+
+if __name__ == "__main__":
+    pytest.main()

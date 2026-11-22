@@ -1,22 +1,22 @@
 # 125. Valid Palindrome - https://leetcode.com/problems/valid-palindrome/description/
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        l = 0
-        r = len(s) - 1
+        left = 0
+        right = len(s) - 1
 
-        while l < r:
-            if (s[l].isdigit() or s[l].isalpha()) != True:
-                l += 1
+        while left < right:
+            if not s[left].isalnum():
+                left += 1
                 continue
 
-            if (s[r].isdigit() or s[r].isalpha()) != True:
-                r -= 1
+            if not s[right].isalnum():
+                right -= 1
                 continue
 
-            if s[l].lower() != s[r].lower():
+            if s[right].lower() != s[left].lower():
                 return False
 
-            l += 1
-            r -= 1
+            left += 1
+            right -= 1
 
         return True

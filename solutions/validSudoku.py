@@ -1,29 +1,28 @@
-from collections import defaultdict
 from typing import List
 
 
 # 36. Valid Sudoku - https://leetcode.com/problems/valid-sudoku/description/
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        cols = defaultdict(set)
-        rows = defaultdict(set)
-        squares = defaultdict(set)
+        cols = [set() for _ in range(9)]
+        rows = [set() for _ in range(9)]
+        squares = [[set() for _ in range(3)] for _ in range(3)]
 
         for r in range(9):
             for c in range(9):
-                if board[r][c] == ".":
+                cellValue = board[r][c]
+                if cellValue == ".":
                     continue
 
-                key = (r // 3, c // 3)
-                if (
-                    board[r][c] in rows[r]
-                    or board[r][c] in cols[c]
-                    or board[r][c] in squares[key]
-                ):
+                if cellValue in rows[r]:
+                    return False
+                if cellValue in cols[c]:
+                    return False
+                if cellValue in squares[r // 3][c // 3]:
                     return False
 
-                rows[r].add(board[r][c])
-                cols[c].add(board[r][c])
-                squares[key].add(board[r][c])
+                rows[r].add(cellValue)
+                cols[c].add(cellValue)
+                squares[r // 3][c // 3].add(cellValue)
 
         return True

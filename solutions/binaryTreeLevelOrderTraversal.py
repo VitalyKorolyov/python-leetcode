@@ -1,5 +1,5 @@
 import collections
-from typing import List, Optional
+from typing import Optional
 
 
 # Definition for a binary tree node.
@@ -12,7 +12,7 @@ class TreeNode:
 
 # 102. Binary Tree Level Order Traversal - https://leetcode.com/problems/binary-tree-level-order-traversal/description/
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:
         res = []
 
         queue = collections.deque()

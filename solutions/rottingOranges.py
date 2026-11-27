@@ -1,10 +1,9 @@
-from typing import List
 import collections
 
 
 # 994. Rotting Oranges - https://leetcode.com/problems/rotting-oranges/description/
 class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
+    def orangesRotting(self, grid: list[list[int]]) -> int:
         queue = collections.deque()
         fresh = 0
         rLength = len(grid)

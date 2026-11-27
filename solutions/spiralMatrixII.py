@@ -1,8 +1,6 @@
-from typing import List
-
 # 59. Spiral Matrix II - https://leetcode.com/problems/spiral-matrix-ii/description/
 class Solution:
-    def generateMatrix(self, n: int) -> List[List[int]]:
+    def generateMatrix(self, n: int) -> list[list[int]]:
         count = 1
 
         l, r, t, b = 0, n - 1, 0, n - 1

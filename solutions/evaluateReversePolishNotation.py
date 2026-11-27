@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 150. Evaluate Reverse Polish Notation - https://leetcode.com/problems/evaluate-reverse-polish-notation/description/
 class Solution:
-    def evalRPN(self, tokens: List[str]) -> int:
+    def evalRPN(self, tokens: list[str]) -> int:
         stackNum = []
 
         for t in tokens:

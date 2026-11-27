@@ -17,8 +17,9 @@ class Solution:
 
         return answer
 
-
-    def findTwoSum(self, nums: list[int], target: int, startIndex: int) -> list[list[int]]:
+    def findTwoSum(
+        self, nums: list[int], target: int, startIndex: int
+    ) -> list[list[int]]:
         pairs = []
 
         n = len(nums) - 1

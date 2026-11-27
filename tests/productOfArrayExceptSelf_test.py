@@ -1,6 +1,6 @@
-import unittest
 from solutions.productOfArrayExceptSelf import Solution
 
-class SolutionTest(unittest.TestCase):
+
+class TestSolution:
     def test(self):
-        self.assertEqual(Solution().productExceptSelf([1,2,3,4]), [24,12,8,6])
+        assert Solution().productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6]

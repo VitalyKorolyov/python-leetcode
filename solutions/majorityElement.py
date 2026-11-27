@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 169. Majority Element - https://leetcode.com/problems/majority-element/description/
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElement(self, nums: list[int]) -> int:
         res, count = nums[0], 1
 
         for i in range(1, len(nums)):
@@ -13,7 +10,7 @@ class Solution:
 
         return res
 
-    def majorityElementHashMap(self, nums: List[int]) -> int:
+    def majorityElementHashMap(self, nums: list[int]) -> int:
         count = {}
 
         res, maxCount = 0, 0

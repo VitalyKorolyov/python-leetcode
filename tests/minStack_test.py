@@ -1,17 +1,16 @@
-import unittest
 from solutions.minStack import MinStack
 
 
-class SolutionTest(unittest.TestCase):
+class TestSolution:
     def test(self):
         minStack = MinStack()
         minStack.push(-2)
         minStack.push(0)
         minStack.push(-3)
 
-        self.assertEqual(minStack.getMin(), -3)
+        assert minStack.getMin() == -3
 
         minStack.pop()
         minStack.top()
 
-        self.assertEqual(minStack.getMin(), -2)
+        assert minStack.getMin() == -2

@@ -1,8 +1,6 @@
-from typing import List
-
 # 303. Range Sum Query - Immutable - https://leetcode.com/problems/range-sum-query-immutable/description/?q=range+sum+query
 class NumArray:
-    def __init__(self, nums: List[int]):
+    def __init__(self, nums: list[int]):
         self.prefSum = []
         sum = 0
         for n in nums:

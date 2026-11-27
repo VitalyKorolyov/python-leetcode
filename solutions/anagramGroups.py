@@ -1,9 +1,9 @@
 from collections import defaultdict
-from typing import List
+
 
 # 49. Group Anagrams - https://leetcode.com/problems/group-anagrams/description/
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         hashMap = defaultdict(list)
 
         for s in strs:

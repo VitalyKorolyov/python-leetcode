@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 36. Valid Sudoku - https://leetcode.com/problems/valid-sudoku/description/
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
         cols = [set() for _ in range(9)]
         rows = [set() for _ in range(9)]
         squares = [[set() for _ in range(3)] for _ in range(3)]

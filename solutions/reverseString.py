@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 344. Reverse String - https://leetcode.com/problems/reverse-string/description/
 class Solution:
-    def reverseString(self, s: List[str]) -> None:
+    def reverseString(self, s: list[str]) -> None:
         length = len(s)
 
         for i in range(int(length / 2)):

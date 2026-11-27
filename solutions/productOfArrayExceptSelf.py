@@ -1,8 +1,6 @@
-from typing import List
-
 # 238. Product of Array Except Self - https://leetcode.com/problems/product-of-array-except-self/submissions/1415245316/
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
+    def productExceptSelf(self, nums: list[int]) -> list[int]:
         n = len(nums)
         left = [1] * n
         right = [1] * n

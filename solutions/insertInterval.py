@@ -1,11 +1,8 @@
-from typing import List
-
-
 # 57. Insert Interval - https://leetcode.com/problems/insert-interval/description/
 class Solution:
     def insert(
-        self, intervals: List[List[int]], newInterval: List[int]
-    ) -> List[List[int]]:
+        self, intervals: list[list[int]], newInterval: list[int]
+    ) -> list[list[int]]:
 
         result = []
         i = 0

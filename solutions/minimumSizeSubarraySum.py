@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 209. Minimum Size Subarray Sum - https://leetcode.com/problems/minimum-size-subarray-sum/description/
 class Solution:
-    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+    def minSubArrayLen(self, target: int, nums: list[int]) -> int:
         length = len(nums)
         answer = float("inf")
         sum = 0

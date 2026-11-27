@@ -1,5 +1,5 @@
 # Definition for a binary tree node.
-from typing import List, Optional
+from typing import Optional
 
 
 # 94. Binary Tree Inorder Traversal - https://leetcode.com/problems/binary-tree-inorder-traversal/description/
@@ -11,12 +11,12 @@ class TreeNode:
 
 
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
         result = list()
         self.dfs(root, result)
         return result
 
-    def dfs(self, root: Optional[TreeNode], result: List[int]):
+    def dfs(self, root: Optional[TreeNode], result: list[int]):
         if root is None:
             return
 

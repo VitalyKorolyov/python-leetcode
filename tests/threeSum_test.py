@@ -2,7 +2,6 @@ from importlib import import_module
 
 import pytest
 
-
 Solution = import_module("solutions.3sum").Solution
 
 

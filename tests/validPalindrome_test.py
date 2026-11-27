@@ -1,10 +1,7 @@
-import unittest
 from solutions.validPalindrome import Solution
 
 
-class SolutionTest(unittest.TestCase):
+class TestSolution:
     def test(self):
-        self.assertEqual(
-            Solution().isPalindrome("A man, a plan, a canal: Panama"), True
-        )
-        self.assertEqual(Solution().isPalindrome("race a car"), False)
+        assert Solution().isPalindrome("A man, a plan, a canal: Panama") == True
+        assert Solution().isPalindrome("race a car") == False

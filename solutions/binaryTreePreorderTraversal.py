@@ -1,5 +1,5 @@
 # Definition for a binary tree node.
-from typing import List, Optional
+from typing import Optional
 
 
 # 144. Binary Tree Preorder Traversal - https://leetcode.com/problems/binary-tree-preorder-traversal/description/
@@ -11,15 +11,15 @@ class TreeNode:
 
 
 class Solution:
-    def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def preorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
         result = list()
         self.dfs(root, result)
         return result
-    
-    def dfs(self, root: Optional[TreeNode], result: List[int]):
-         if root == None:
-             return
-         
-         result.append(root.val)
-         self.dfs(root.left, result)
-         self.dfs(root.right, result)
+
+    def dfs(self, root: Optional[TreeNode], result: list[int]):
+        if root == None:
+            return
+
+        result.append(root.val)
+        self.dfs(root.left, result)
+        self.dfs(root.right, result)

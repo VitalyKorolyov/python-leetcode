@@ -1,8 +1,6 @@
-from typing import List
-
 # 128. Longest Consecutive Sequence - https://leetcode.com/problems/longest-consecutive-sequence/description/
 class Solution:
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longestConsecutive(self, nums: list[int]) -> int:
         hash = set(nums)
         res = 0
 
@@ -12,7 +10,7 @@ class Solution:
 
                 while (length + num) in hash:
                     length += 1
-                
+
                 res = max(res, length)
 
         return res

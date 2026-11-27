@@ -1,7 +1,7 @@
-import unittest
-from solutions.topKElementsInList import Solution
+from solutions.TopKElementsInList import Solution
 
-class SolutionTest(unittest.TestCase):
+
+class TestSolution:
     def test(self):
-        self.assertEqual(Solution().topKFrequent([1,1,1,2,2,3], 2), [1,2])
-        self.assertEqual(Solution().topKFrequent([7,7], 1), [7])
+        assert Solution().topKFrequent([1, 1, 1, 2, 2, 3], 2) == [1, 2]
+        assert Solution().topKFrequent([7, 7], 1) == [7]

@@ -1,9 +1,6 @@
-from typing import List
-
-
 # 853. Car Fleet - https://leetcode.com/problems/car-fleet/description/
 class Solution:
-    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+    def carFleet(self, target: int, position: list[int], speed: list[int]) -> int:
         pairs = []
 
         for p, s in zip(position, speed):

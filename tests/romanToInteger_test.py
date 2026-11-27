@@ -1,4 +1,3 @@
-import pytest
 from solutions.romanToInteger import Solution
 
 
@@ -11,7 +10,3 @@ class TestRomanToInt:
 
     def test_three(self):
         assert Solution().romanToInt("MCMXCIV") == 1994
-
-
-if __name__ == "__main__":
-    pytest.main()

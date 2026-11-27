@@ -7,6 +7,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 # 104. Maximum Depth of Binary Tree - https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:

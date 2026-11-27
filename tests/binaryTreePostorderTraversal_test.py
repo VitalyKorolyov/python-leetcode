@@ -1,7 +1,7 @@
-import unittest
 from solutions.binaryTreePostorderTraversal import Solution, TreeNode
 
-class TestPostorderTraversal(unittest.TestCase):
+
+class TestPostorderTraversal:
     def build_tree(self, nodes):
         # Helper to build tree from list (None for empty)
         if not nodes:
@@ -24,12 +24,12 @@ class TestPostorderTraversal(unittest.TestCase):
 
     def test_empty_tree(self):
         sol = Solution()
-        self.assertEqual(sol.postorderTraversal(None), [])
+        assert sol.postorderTraversal(None) == []
 
     def test_single_node(self):
         sol = Solution()
         root = TreeNode(1)
-        self.assertEqual(sol.postorderTraversal(root), [1])
+        assert sol.postorderTraversal(root) == [1]
 
     def test_left_right(self):
         sol = Solution()
@@ -38,7 +38,7 @@ class TestPostorderTraversal(unittest.TestCase):
         #        / \
         #       2   3
         # Postorder: [2, 3, 1]
-        self.assertEqual(sol.postorderTraversal(root), [2, 3, 1])
+        assert sol.postorderTraversal(root) == [2, 3, 1]
 
     def test_complex_tree(self):
         sol = Solution()
@@ -49,7 +49,4 @@ class TestPostorderTraversal(unittest.TestCase):
         #          /
         #         3
         # Postorder: [3, 2, 1]
-        self.assertEqual(sol.postorderTraversal(root), [3, 2, 1])
-
-if __name__ == '__main__':
-    unittest.main()
+        assert sol.postorderTraversal(root) == [3, 2, 1]

@@ -1,8 +1,7 @@
-import unittest
 from solutions.binaryTreeLevelOrderTraversal import Solution, TreeNode
 
 
-class TestBinaryTreeLevelOrderTraversal(unittest.TestCase):
+class TestBinaryTreeLevelOrderTraversal:
     def build_tree(self, values):
         """
         Helper function to build a binary tree from a list of values (level order),
@@ -30,12 +29,12 @@ class TestBinaryTreeLevelOrderTraversal(unittest.TestCase):
 
     def test_empty_tree(self):
         sol = Solution()
-        self.assertEqual(sol.levelOrder(None), [])
+        assert sol.levelOrder(None) == []
 
     def test_single_node(self):
         sol = Solution()
         root = TreeNode(1)
-        self.assertEqual(sol.levelOrder(root), [[1]])
+        assert sol.levelOrder(root) == [[1]]
 
     def test_complete_tree(self):
         sol = Solution()
@@ -46,21 +45,21 @@ class TestBinaryTreeLevelOrderTraversal(unittest.TestCase):
         #           15   7
         vals = [3, 9, 20, None, None, 15, 7]
         root = self.build_tree(vals)
-        self.assertEqual(sol.levelOrder(root), [[3], [9, 20], [15, 7]])
+        assert sol.levelOrder(root) == [[3], [9, 20], [15, 7]]
 
     def test_left_skewed_tree(self):
         sol = Solution()
         # Tree: 1 -> 2 -> 3 -> 4
         vals = [1, 2, None, 3, None, 4]
         root = self.build_tree(vals)
-        self.assertEqual(sol.levelOrder(root), [[1], [2], [3], [4]])
+        assert sol.levelOrder(root) == [[1], [2], [3], [4]]
 
     def test_right_skewed_tree(self):
         sol = Solution()
         # Tree: 1 -> 2 -> 3 -> 4 (all right children)
         vals = [1, None, 2, None, 3, None, 4]
         root = self.build_tree(vals)
-        self.assertEqual(sol.levelOrder(root), [[1], [2], [3], [4]])
+        assert sol.levelOrder(root) == [[1], [2], [3], [4]]
 
     def test_full_tree(self):
         sol = Solution()
@@ -71,8 +70,4 @@ class TestBinaryTreeLevelOrderTraversal(unittest.TestCase):
         #      4   5  6   7
         vals = [1, 2, 3, 4, 5, 6, 7]
         root = self.build_tree(vals)
-        self.assertEqual(sol.levelOrder(root), [[1], [2, 3], [4, 5, 6, 7]])
-
-
-if __name__ == "__main__":
-    unittest.main()
+        assert sol.levelOrder(root) == [[1], [2, 3], [4, 5, 6, 7]]

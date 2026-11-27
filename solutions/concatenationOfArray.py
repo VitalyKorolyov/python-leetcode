@@ -1,9 +1,6 @@
-from typing import List
-
-
-#1929. Concatenation of Array - https://leetcode.com/problems/concatenation-of-array/description/
+# 1929. Concatenation of Array - https://leetcode.com/problems/concatenation-of-array/description/
 class Solution:
-    def getConcatenation(self, nums: List[int]) -> List[int]:
+    def getConcatenation(self, nums: list[int]) -> list[int]:
         length = len(nums)
         ans = [0] * length * 2
 

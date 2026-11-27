@@ -1,8 +1,7 @@
-import unittest
 from solutions.binarySearch import Solution
 
 
-class SolutionTest(unittest.TestCase):
+class TestSolution:
     def test(self):
-        self.assertEqual(Solution().search([1, 2, 5, 8, 9], 8), 3)
-        self.assertEqual(Solution().search([1, 2, 5, 8, 9], 0), -1)
+        assert Solution().search([1, 2, 5, 8, 9], 8) == 3
+        assert Solution().search([1, 2, 5, 8, 9], 0) == -1

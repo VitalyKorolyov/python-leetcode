@@ -1,9 +1,9 @@
-from typing import List, Set
+from typing import Set
 
 
 # 695. Max Area of Island - https://leetcode.com/problems/max-area-of-island/description/
 class Solution:
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+    def maxAreaOfIsland(self, grid: list[list[int]]) -> int:
         maxArea = 0
         visited = set()
 
@@ -17,7 +17,7 @@ class Solution:
         return maxArea
 
     def calculateIslandArea(
-        self, grid: List[List[int]], visited: Set[int], i: int, j: int
+        self, grid: list[list[int]], visited: Set[int], i: int, j: int
     ) -> int:
         if i < 0 or j < 0:
             return 0
